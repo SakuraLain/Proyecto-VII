@@ -9,6 +9,70 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="archivo.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <style>
+      .slider-text {
+    position: absolute;
+    right: 0;
+    bottom: 0
+  }
+  
+#slider .card-content{
+    max-width: 50%;
+  }
+  
+#slider{
+    overflow: hidden;
+  }
+  
+@media screen and (max-width: 1023px) {
+    #slider .card-content{
+      display: none;
+    }
+  }
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.item-slide img {
+  max-width: 1200px;
+}
+
+.caption-container {
+  color: white;
+}
+
+    </style>
 </head>
 
 <body style="background-color: #eff6f7;">
@@ -18,6 +82,7 @@
     ?>
     <div>
         <!-- Menu -->
+
         
   <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: #023e8a;color: #fff;">
     <div class="container">
@@ -48,6 +113,150 @@
   </nav>
   </nav> 
 
+  
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Media</h1>
+    </div>
+  </section>
+  
+  <section>
+    <div class="container has-text-centered">
+      <h1 class="title">Images destacadas de la semana</h1>
+        <p><b> Cuál es el objetivo de las finanzas</b></p>
+          <p>  El principal objetivo de las finanzas es examinar y mantener el control de los movimientos económicos de una persona o de un colectivo para satisfacer sus necesidades, cumplir con sus obligaciones y sacar el mayor provecho de sus recursos. Estrictamente, esta es su única función directa.</p>
+
+        <div id="slider" class="card mt-6">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-16by9 is-covered">
+                        <img src="./img/1.jpeg" alt="" />
+                    </figure>
+                </div>
+                <div class="card-content slider-text ">
+                    <div class="is-size-5 box">
+                      Finanzas personales -
+                      Las finanzas personales son aquellas con las que estamos más familiarizados. Como puedes imaginar, giran en torno a optimizar el uso de recursos y gestionar los movimientos económicos de individuos específicos.
+                    </div>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-image">
+                    <figure class="image is-16by9 is-covered">
+                        <img src="./img/3.jpeg" alt="" />
+                    </figure>
+                </div>
+                <div class="card-content slider-text ">                    
+                    <p class=" is-size-5 box">
+                      Finanzas públicas -
+                      Por su parte, las finanzas públicas son la contraparte de las finanzas privadas. Este tipo de finanzas busca hacer un buen uso de los recursos públicos de un Estado con el fin de promover el bienestar colectivo. La particularidad real de este tipo de finanzas es que son de carácter público.
+                    </p>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="card-image">
+                    <p class="image is-16by9 is-covered">
+                        <img src="./img/4.jpeg" alt="" />
+                    </p>
+                </div>
+                <div class="card-content slider-text ">
+                    <p class="is-size-5 box">
+                      Finanzas empresariales -
+                      Las finanzas empresariales son otro tipo de finanzas privadas. No responden a las necesidades de individuos concretos, sino a los intereses de organizaciones o colectivos de personas que conforman una compañía. En este caso, el objetivo es hacer un buen uso de los recursos con miras a crecer empresarial y económicamente.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+</section>
+  
+<section class="section">
+  <div class="container has-text-centered">
+      <h2 class="title">Videos populares</h2>
+      <p>Todos los días escuchamos hablar sobre finanzas. En los noticiarios se habla del estado financiero internacional y en las calles las personas hablan de su buena, o mala, fortuna financiera. Los bancos ofrecen productos financieros y en las empresas se discuten las finanzas para emprender proyectos de negocios.</p>
+
+      <div class="columns is-centered" style="padding: 2rem">
+          <div class="column">
+              <div class="card">
+                  <div class="card-image">
+                    <div class="video"> <!-- Aquí van tus videos -->
+                      <iframe width="460" height="260" src="https://www.youtube.com/embed/dUiZ5is-Chw?si=eXdVO-Ej6Qsc8utb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                      <div class="media">
+                          <div class="media-content">
+                              <p class="title is-4">La Manera Más Fácil para Entender las Finanzas</p>
+                          </div>
+                      </div>
+
+                      <div class="content">
+                          Esta es probablemente la manera más fácil para entender cómo funcionan las finanzas personales.
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="column">
+            <div class="card">
+                <div class="card-image">
+                  <div class="video"> <!-- Aquí van tus videos -->
+                    <iframe width="460" height="260" src="https://www.youtube.com/embed/upPekPFINlc?si=X507_hJA0V32TS9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4">FINANZAS BÁSICAS PARA EMPRENDEDORES | INTRODUCCIÓN A LAS FINANZAS 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        En este video entramos en el mundo de las Finanzas de forma práctica, en un mini curso de finanzas básicas para emprendedores vemos y analizamos temas como tipos de gastos en un negocio, errores de emprendedores primerizos, flujo de fondos y Rentabilidad, además platicamos sobre 6 de las razones mas comunes por las que los negocios quiebran
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+          <div class="card">
+              <div class="card-image">
+                <div class="video"> <!-- Aquí van tus videos -->
+                  <iframe width="460" height="260" src="https://www.youtube.com/embed/9sCVcWD1Svs?si=M2h0ayuRlgC2Aka3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="card-content">
+                  <div class="media">
+                      <div class="media-content">
+                          <p class="title is-4">Educación Financiera para Principiantes - Esto es lo PRIMERO que debes saber</p>
+                      </div>
+                  </div>
+
+                  <div class="content">
+                      Una de las cosas más importantes en la vida es la educación financiera. Nunca es demasiado pronto para empezar a aprender sobre el dinero y cómo gestionarlo. La educación financiera puede ayudarte a tomar mejores decisiones con tu dinero, ya sea que estés ahorrando para un día lluvioso o invirtiendo para la jubilación.
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      
+
+
+      </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
               
       <footer class="section" style="background-color: #fff;" >
         <div class="container">
@@ -69,7 +278,7 @@
         <div class="pt-5" style="border-top: 1px solid #dee2e6;"></div>
         <div class="container">
           <div class="is-flex-tablet is-justify-content-between is-align-items-center">
-            <p>All rights reserved © Financiapp 2023</p>
+            <p>All rights reserved © Financiapp 2024</p>
             <div class="py-2 is-hidden-tablet"></div>
             <div class="ml-auto">
               <a class="mr-4 is-inline-block" href="#">
@@ -91,6 +300,16 @@
     <script src="extension.js"></script>
     <!-- FontaWesome -->
     <script src="https://kit.fontawesome.com/414c860b05.js" crossorigin="anonymous"></script>
-</body>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script>
+        bulmaCarousel.attach('#slider', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            infinite: true,
+            autoplay: true,
+        });
+    </script>
 
+  </body>
 </html>
