@@ -2,19 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="#" />      
-  <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">	 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="archivo.css">  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.3. Creación de elementos HTML de forma dinámica</title>    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body style="background-color: #eff6f7;">
 
-    <?php
-    echo "";
-    ?>
     <div>
         <!-- Menu -->
         
@@ -45,67 +42,172 @@
       </div>
     </div>
   </nav>
+  <div class="container" style="margin-bottom: 800px;background-color: #eff6f7;">
+    <div class="has-text-centered">
+        <button class="button is-primary mb-4 mt-4 has-text-centered" id="crearPresupuesto">Crear Nuevo Presupuesto</button>
+    </div>
 
-  <div class="container" style="margin-bottom: 300px;">
-    <div class="row">
-        <div class="col-lg-12">                             
-         <table id="myTable" class="table table-dark"></table>                
-        </div>                                        
-    </div>                  
+  <div class="columns">
+    <div class="column" id="seccionAhorro">
+      <h1 class="title is-4">1 Registro del Ahorro</h1>
+    </div>
+    <div class="column" id="seccionVivienda">
+      <h1 class="title is-4">2 La Vivienda</h1>
+    </div>
+    <div class="column" id="seccionManutencion">
+      <h1 class="title is-4">3 Manutención</h1>
+    </div>
+    <div class="column" id="seccionBasicas">
+      <h1 class="title is-4">4 Necesidades Básicas</h1>
+    </div>
+    <div class="column" id="seccionOtros">
+      <h1 class="title is-4">5 Otros</h1>
+    </div>
   </div>
 
-
-
-
-              
-      <footer class="section" style="background-color: #fff;" >
-        <div class="container">
-          <div class="pb-5 is-flex is-flex-wrap-wrap is-justify-content-between is-align-items-center">
-            <div class="mr-auto mb-2">
-              <a class="is-inline-block" href="#">
-                <img class="image" src="Financiapp1.png" alt="" width="96px"></a>
-            </div>
-            <div>
-              <ul class="is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center" style="background-color: #ffffff !important;">
-                <li class="mr-4"><a class="button is-white" href="videos.html">Vídeos</a></li>
-                <li class="mr-4"><a class="button is-white" href="faq.html">FAQ</a></li>
-                <li class="mr-4"><a class="button is-white" href="presupuestos.html">Presupuestos</a></li>
-                <li><a class="button is-white" href="consejos.html">Consejos Financieros</a></li>
-              </ul>
+  <div id="modalCrear" class="modal">
+    <div  class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Crear Nuevo Presupuesto</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field">
+          <label class="label">Nombre del Presupuesto</label>
+          <div class="control">
+            <input class="input" type="text" id="nombrePresupuesto">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Etiqueta del Presupuesto</label>
+          <div class="control">
+            <div class="select">
+              <select id="etiquetaPresupuesto">
+                <option value="1">1 Registro del Ahorro</option>
+                <option value="2">2 La Vivienda</option>
+                <option value="3">3 Manutención</option>
+                <option value="4">4 Necesidades Básicas</option>
+                <option value="5">5 Otros</option>
+              </select>
             </div>
           </div>
         </div>
-        <div class="pt-5" style="border-top: 1px solid #dee2e6;"></div>
-        <div class="container">
-          <div class="is-flex-tablet is-justify-content-between is-align-items-center">
-            <p>All rights reserved © Financiapp 2024</p>
-            <div class="py-2 is-hidden-tablet"></div>
-            <div class="ml-auto">
-              <a class="mr-4 is-inline-block" href="#">
-                <img src="https://bulmatemplates.github.io/bulma-templates/images/app-page/socials/facebook.svg" alt=""></a>
-              <a class="mr-4 is-inline-block" href="#">
-                <img src="https://bulmatemplates.github.io/bulma-templates/images/app-page/socials/twitter.svg" alt=""></a>
-              <a class="mr-4 is-inline-block" href="#">
-                <img src="https://bulmatemplates.github.io/bulma-templates/images/app-page/socials/github.svg" alt=""></a>
-              <a class="mr-4 is-inline-block" href="#">
-                <img src="https://bulmatemplates.github.io/bulma-templates/images/app-page/socials/instagram.svg" alt=""></a>
-              <a class="is-inline-block" href="#">
-                <img src="https://bulmatemplates.github.io/bulma-templates/images/app-page/socials/linkedin.svg" alt=""></a>
-            </div>
+        <div class="field">
+          <label class="label">Fecha de Inicio</label>
+          <div class="control">
+            <input class="input" type="date" id="fechaInicio">
           </div>
         </div>
+        <div class="field">
+          <label class="label">Fecha de Fin</label>
+          <div class="control">
+            <input class="input" type="date" id="fechaFin">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Cantidad Inicial</label>
+          <div class="control">
+            <input class="input" type="number" id="cantidadInicial">
+          </div>
+        </div>        
+        <div class="field">
+            <label class="label">Meta del Presupuesto</label>
+            <div class="control">
+              <input class="input" type="number" id="meta">
+            </div>
+          </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="guardarPresupuesto">Guardar</button>
+        <button class="button" id="cancelarPresupuesto">Cancelar</button>
       </footer>
+    </div>
+  </div>
 
-    <!-- Funcionalidad -->
-    <script src="extension.js"></script>
-    <!-- FontaWesome -->
-    <script src="https://kit.fontawesome.com/414c860b05.js" crossorigin="anonymous"></script>
+  
+<div id="modalAgregar" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Agregar al Presupuesto</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field">
+          <label class="label">Cantidad a Agregar</label>
+          <div class="control">
+            <input class="input" type="number" id="cantidadAgregar" value="0">
+          </div>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="confirmarAgregar">Aceptar</button>
+        <button class="button" id="cancelarAgregar">Cancelar</button>
+      </footer>
+    </div>
+  </div>
 
-    <script src="jquery/jquery-3.3.1.min.js"></script>	 	
-    <script src="popper/popper.min.js"></script>	 	 	
-    <script src="bootstrap4/js/bootstrap.min.js"></script>   
-    
-    <script src="plugins/dynamicTable/jquery.dynamicTable-1.0.0.js"></script>
+  <div id="modalQuitar" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Quitar del Presupuesto</p>
+        </header>
+        <section class="modal-card-body">
+          <div class="field">
+            <label class="label">Cantidad a Quitar</label>
+            <div class="control">
+              <input class="input" type="number" id="cantidadQuitar" value="0">
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success" id="confirmarQuitar">Aceptar</button>
+          <button class="button" id="cancelarQuitar">Cancelar</button>
+        </footer>
+      </div>
+  </div>
+</div>
+
+  <footer class="section" style="background-color: #fff;" >
+    <div class="container">
+      <div class="pb-5 is-flex is-flex-wrap-wrap is-justify-content-between is-align-items-center">
+        <div class="mr-auto mb-2">
+          <a class="is-inline-block" href="#">
+            <img class="image" src="Financiapp1.png" alt="" width="96px"></a>
+        </div>
+        <div>
+          <ul class="is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center" style="background-color: #ffffff !important;">
+            <li class="mr-4"><a class="button is-white" href="videos.html">Vídeos</a></li>
+            <li class="mr-4"><a class="button is-white" href="faq.html">FAQ</a></li>
+            <li class="mr-4"><a class="button is-white" href="presupuestos.html">Presupuestos</a></li>
+            <li><a class="button is-white" href="consejos.html">Consejos Financieros</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pt-5" style="border-top: 1px solid #dee2e6;"></div>
+    <div class="container">
+      <div class="is-flex-tablet is-justify-content-between is-align-items-center">
+        <p>All rights reserved © Financiapp 2024</p>
+        <div class="py-2 is-hidden-tablet"></div>
+        <div class="ml-auto">
+          <a class="mr-4 is-inline-block" href="#">
+            <img src="https://bulmatemplates.github.io/bulma-templates/images/app-page/socials/facebook.svg" alt=""></a>
+          <a class="mr-4 is-inline-block" href="#">
+            <img src="https://bulmatemplates.github.io/bulma-templates/images/app-page/socials/twitter.svg" alt=""></a>
+          <a class="mr-4 is-inline-block" href="#">
+            <img src="https://bulmatemplates.github.io/bulma-templates/images/app-page/socials/github.svg" alt=""></a>
+          <a class="mr-4 is-inline-block" href="#">
+            <img src="https://bulmatemplates.github.io/bulma-templates/images/app-page/socials/instagram.svg" alt=""></a>
+          <a class="is-inline-block" href="#">
+            <img src="https://bulmatemplates.github.io/bulma-templates/images/app-page/socials/linkedin.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		
     <script src="codigo.js"></script> 	
 </body>
